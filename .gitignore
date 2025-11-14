@@ -1,0 +1,38 @@
+# python cruft
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# envs
+.env
+*.env
+.envrc
+.venv/
+venv/
+env/
+.env.*
+
+# data dirs (big stuff)
+Transit Data/
+derived/
+figures/
+data/
+*.gpkg
+*.shp
+*.db
+*.sqlite
+*.feather
+*.parquet
+*.csv
+*.zip
+*.gz
+
+# notebooks autosaves
+.ipynb_checkpoints/
+
+# mac junk
+.DS_Store
+
+# google drive weird files
+*.shortcut*
