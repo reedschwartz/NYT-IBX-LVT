@@ -1,6 +1,7 @@
 README.md
 pyproject.toml
 src/nyt_ibx_lvt/__init__.py
+src/nyt_ibx_lvt/pipeline.py
 src/nyt_ibx_lvt.egg-info/PKG-INFO
 src/nyt_ibx_lvt.egg-info/SOURCES.txt
 src/nyt_ibx_lvt.egg-info/dependency_links.txt

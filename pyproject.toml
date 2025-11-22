@@ -29,6 +29,7 @@ dependencies = [
   "sodapy>=2.1",
   "pyarrow>=21.0.0",
   "requests>=2.32.5",
+  "folium>=0.20.0",
 ]
 
 [project.optional-dependencies]
