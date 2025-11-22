@@ -273,7 +273,7 @@ def _main() -> None:
         required=True,
         help="Parquet or CSV created via prepare_values_parquet containing columns: bbl, value, tax_class.",
     )
-    parser.add_argument("--stations", default="data/stations_ibx.csv", help="CSV of stations with lon/lat.")
+    parser.add_argument("--stations", default="data/stations_ibx.geojson", help="GeoJSON of stations with lon/lat.")
     parser.add_argument(
         "--bbl-field",
         default="bbl",

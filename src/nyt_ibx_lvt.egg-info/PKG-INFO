@@ -49,15 +49,15 @@ Pipeline outline:
 - Slim the 5+ GB DOF valuation CSV to Parquet:  
   `uv run python scripts/prepare_values.py --csv data/Property_Valuation_and_Assessment_Data_Tax_Classes_1,2,3,4_20251120.csv --out data/property_values.parquet --value-field CURMKTTOT --tax-class-field CURTAXCLASS`
 - Add parcel geometries (MapPLUTO GeoPackage/shapefile/FGDB) under `data/` (e.g., `data/nyc_mappluto_25v3_fgdb/MapPLUTO25v3.gdb`); ensure a `bbl` field exists.
-- Run the IBX walkshed estimator (0.5 mile each side of `data/stations_ibx.csv`):  
-  `uv run python -m nyt_ibx_lvt.pipeline --pluto data/nyc_mappluto_25v3_fgdb/MapPLUTO25v3.gdb --bbl-field BBL --values data/property_values.parquet --stations data/stations_ibx.csv --out-geojson data/ibx_walkshed.geojson --map-html data/ibx_walkshed.html`
+- Run the IBX walkshed estimator (0.5 mile each side of `data/stations_ibx.geojson`):
+  `uv run python -m nyt_ibx_lvt.pipeline --pluto data/nyc_mappluto_25v3_fgdb/MapPLUTO25v3.gdb --bbl-field BBL --values data/property_values.parquet --stations data/stations_ibx.geojson --out-geojson data/ibx_walkshed.geojson --map-html data/ibx_walkshed.html`
 - CLI prints baseline taxable value plus 4/6/8/10% uplift; tune with `--exclude-tax-classes` or `--uplift-rates`. `--map-html` needs `folium` and samples parcels to keep file size small.
 - Swap in a different stations CSV to model other alignments.
 - Prefer to work interactively? Open `notebooks/ibx_walkshed.ipynb` via `uv run jupyter lab` and follow the cells (it handles CSV→Parquet, runs the pipeline, and exports the map).
 
 ## Data references
 - Valuation CSV: `data/Property_Valuation_and_Assessment_Data_Tax_Classes_1,2,3,4_20251120.csv`
-- Stations: `data/stations_ibx.csv`
+- Stations: `data/stations_ibx.geojson`
 - Gupta paper: `data/Gupta - Take the Q Train.pdf`
 - DOF dictionary: `data/Property_Assessment_Data_Dictionary.xlsx`
 - Parcel geometries: `data/nyc_mappluto_25v3_fgdb` (folder) — MapPLUTO for walkshed selection.
