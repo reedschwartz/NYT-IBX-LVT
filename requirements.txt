@@ -1,5 +1,5 @@
 # Requirements for NYT-IBX-LVT
-# Core geospatial and data libraries used by `walkshed_land_value_estimator.py`
+# Core geospatial and data libraries used by the pipeline/CLI/notebook
 geopandas>=0.13
 pandas>=2.0
 shapely>=2.0
@@ -10,6 +10,7 @@ rtree>=1.0
 sodapy>=2.1
 
 # Optional / dev tools (uncomment to install locally or add to a dev requirements file)
+# folium>=0.15  # for HTML map export
 # pytest>=7.0
 # black>=24.0
 # flake8>=6.0
