@@ -1,0 +1,32 @@
+Metadata-Version: 2.4
+Name: nyt-ibx-lvt
+Version: 0.1.0
+Summary: Walkshed and land value estimator utilities.
+Author-email: Reed Schwartz <reed.schwartz.sf@gmail.com>
+License: MIT
+Keywords: walkshed,transit,land value,estimator
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: geopandas>=0.13
+Requires-Dist: pandas>=2.0
+Requires-Dist: shapely>=2.0
+Requires-Dist: fiona>=1.9
+Requires-Dist: pyproj>=3.6
+Requires-Dist: rtree>=1.0
+Requires-Dist: sodapy>=2.1
+Requires-Dist: pyarrow>=21.0.0
+Requires-Dist: requests>=2.32.5
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: flake8; extra == "dev"
+
+# IBX Land Value Project
+
+Code + notebooks for:
+- transit walkshed tessellation
+- served census / DOTS
+- land value estimation and uplift

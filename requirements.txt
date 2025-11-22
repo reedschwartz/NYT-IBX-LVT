@@ -1,0 +1,20 @@
+# Requirements for NYT-IBX-LVT
+# Core geospatial and data libraries used by `walkshed_land_value_estimator.py`
+geopandas>=0.13
+pandas>=2.0
+shapely>=2.0
+fiona>=1.9
+pyproj>=3.6
+rtree>=1.0
+# Socrata client used for optional Socrata dataset loading
+sodapy>=2.1
+
+# Optional / dev tools (uncomment to install locally or add to a dev requirements file)
+# pytest>=7.0
+# black>=24.0
+# flake8>=6.0
+
+# If you use `uv` as the project dependency manager / CLI, install it separately.
+# The package name on PyPI (if you use a specific tool) may vary; uncomment or add
+# the appropriate package here if you want the same environment to provide the `uv` CLI.
+# uv

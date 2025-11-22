@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nyt-ibx-lvt"
+version = "0.1.0"
+description = "Walkshed and land value estimator utilities."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [ { name = "Reed Schwartz", email = "reed.schwartz.sf@gmail.com" } ]
+keywords = ["walkshed", "transit", "land value", "estimator"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+
+# Runtime dependencies: managed/sync with `uv` or pip. Keep versions minimal to avoid
+# build problems on different platforms (Geo libs can be platform-sensitive).
+dependencies = [
+  "geopandas>=0.13",
+  "pandas>=2.0",
+  "shapely>=2.0",
+  "fiona>=1.9",
+  "pyproj>=3.6",
+  "rtree>=1.0",
+  "sodapy>=2.1",
+  "pyarrow>=21.0.0",
+  "requests>=2.32.5",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "black",
+  "flake8",
+]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
