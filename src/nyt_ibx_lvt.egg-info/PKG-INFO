@@ -20,6 +20,8 @@ Requires-Dist: sodapy>=2.1
 Requires-Dist: pyarrow>=21.0.0
 Requires-Dist: requests>=2.32.5
 Requires-Dist: folium>=0.20.0
+Requires-Dist: matplotlib>=3.9.4
+Requires-Dist: dotenv>=0.9.9
 Provides-Extra: dev
 Requires-Dist: pytest; extra == "dev"
 Requires-Dist: black; extra == "dev"

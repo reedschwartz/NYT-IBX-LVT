@@ -1,1 +1,15 @@
-requirements.txt
+geopandas>=0.13
+pandas>=2.0
+shapely>=2.0
+fiona>=1.9
+pyproj>=3.6
+rtree>=1.0
+sodapy>=2.1
+pyarrow>=21.0.0
+requests>=2.32.5
+folium>=0.20.0
+
+[dev]
+pytest
+black
+flake8
